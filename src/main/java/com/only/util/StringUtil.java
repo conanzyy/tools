@@ -23,4 +23,19 @@ public class StringUtil extends StringUtils {
         return old.substring(0,1).toLowerCase() + old.substring(1) ;
     }
 
+    /**
+     * 将数据库中的表名转换为java bean名称
+     * @param table
+     * @return
+     */
+    public static String getModelNameByTable(String table)
+    {
+        String[] tableArr=table.split("_");
+        StringBuffer sb= new StringBuffer();
+        for (String t:tableArr)
+        {
+            sb.append(toUpperCase(t));
+        }
+        return sb.toString();
+    }
 }

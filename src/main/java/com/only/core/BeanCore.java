@@ -18,7 +18,7 @@ public class BeanCore {
         List<TableBean> tableBeanList= DbUtil.getTables(databaseBean);
         for ( TableBean tableBean:tableBeanList)
         {
-            if (!tableBean.getTableName().equals("suc_data_class_brand")){
+            if (!tableBean.getTableName().equals("suc_data_product")){
                 continue;
             }
             List<ColumnsBean> columnsBeanList= DbUtil.getColumns(databaseBean,tableBean.getTableName());

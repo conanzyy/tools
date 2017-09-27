@@ -20,7 +20,7 @@ public class SqlMapCore {
         List<TableBean> tableBeanList= DbUtil.getTables(databaseBean);
         for (  TableBean tableBean:tableBeanList)
         {
-            if (!tableBean.getTableName().equals("suc_online_return_items")){
+            if (!tableBean.getTableName().equals("suc_data_class_brand")){
                 continue;
             }
             List<ColumnsBean> columnsBeanList= DbUtil.getColumns(databaseBean,tableBean.getTableName());
