@@ -13,6 +13,8 @@ public class DeadLockDemo {
 				synchronized(A){
 					try {
 						Thread.currentThread().sleep(2000);
+						A.wait(6000);
+						System.out.print("a-wait");
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
@@ -32,7 +34,18 @@ public class DeadLockDemo {
 						e.printStackTrace();
 					}
 					synchronized(A){
+
+
 						System.out.println("BA");
+						A.notify();
+						try
+						{
+							Thread.currentThread().sleep(5000);
+						}
+						catch (InterruptedException e)
+						{
+							e.printStackTrace();
+						}
 					}
 				}
 			}
