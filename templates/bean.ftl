@@ -8,6 +8,7 @@ import java.util.Date;
 */
 public class ${beanName} implements Serializable
 {
+    private static final long serialVersionUID = 1L;
     //region 属性
 
    <#list columnMapList as item>

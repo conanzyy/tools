@@ -17,7 +17,7 @@ public class DaoCore {
         List<TableBean> tableBeanList= DbUtil.getTables(databaseBean);
         for ( TableBean tableBean:tableBeanList)
         {
-            if (!tableBean.getTableName().equals("suc_alarm_history")){
+            if (!tableBean.getTableName().equals("suc_return_book_deposit")){
                 continue;
             }
             List<ColumnsBean> columnsBeanList= DbUtil.getColumns(databaseBean,tableBean.getTableName());
@@ -47,7 +47,7 @@ public class DaoCore {
             }
             root.put("columnMapList",columnMapList);
             String conent=FreeMarkerUtil.print("dao.ftl",root);
-            FileUtil.writeTxt("F:\\aa\\dao",(String) root.get("daoName")+"Dao.java",conent);
+            FileUtil.writeTxt("F:\\aa\\dao",(String) root.get("daoName")+"Business.java",conent);
         }
         
     }
