@@ -32,7 +32,7 @@ public class HttpClientTest {
         Charset charset = Charset.forName("UTF-8");//设置编码
         try {
             //2：创建http的发送方式对象，是GET还是post
-            HttpPost httppost = new HttpPost("http://fwpsit.cnsuning.com/fwp-web/api/user/collegeStudentAuth.do");
+            HttpPost httppost = new HttpPost("http://fwpsit.cnssssuung.com/fwp-web/api/user/collegeStudentAuth.do");
             httppost.setHeader("Cookie",cookie);
 
             //3：创建要发送的实体，就是key-value的这种结构，借助于这个类，可以实现文件和参数同时上传，很简单的。
